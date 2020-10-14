@@ -7,10 +7,10 @@ import org.junit.Test;
 import java.math.BigDecimal;
 import java.util.Date;
 
-public class TestOperationShould {
+public class OperationShould {
 
     @Test
-    public void withdrawal_should_returns_negative_amount() {
+    public void be_created_with_negative_amount_for_withdrawal() {
         // WHEN
         Operation withdrawal = new Operation(new Date(), TypeOperation.WITHDRAWAL, new Money(BigDecimal.valueOf(100)));
 
@@ -19,7 +19,7 @@ public class TestOperationShould {
     }
 
     @Test
-    public void deposit_should_returns_positive_amount() {
+    public void be_created_with_positive_amount_for_deposit() {
         // WHEN
         Operation withdrawal = new Operation(new Date(), TypeOperation.DEPOSIT, new Money(BigDecimal.valueOf(100)));
 

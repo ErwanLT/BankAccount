@@ -6,7 +6,7 @@ import cucumber.api.java.en.Then;
 import cucumber.api.java.en.When;
 import fr.eletutour.Money;
 import fr.eletutour.account.BankAccount;
-import fr.eletutour.operation.AccountOperations;
+import fr.eletutour.operation.OperationsHistory;
 import fr.eletutour.statement.StatementPrinter;
 import org.assertj.core.api.Assertions;
 
@@ -22,8 +22,8 @@ public class BankAccountOperationsSteps {
 
     @Before
     public void setUp() {
-        AccountOperations accountOperations = new AccountOperations();
-        account = new BankAccount(accountOperations);
+        OperationsHistory operationsHistory = new OperationsHistory();
+        account = new BankAccount(operationsHistory);
         System.setOut(new PrintStream(out));
     }
 

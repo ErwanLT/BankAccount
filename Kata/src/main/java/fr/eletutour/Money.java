@@ -1,6 +1,7 @@
 package fr.eletutour;
 
 import java.math.BigDecimal;
+import java.util.Objects;
 
 public class Money {
     private final BigDecimal amount;
@@ -19,5 +20,13 @@ public class Money {
 
     public BigDecimal getAmount(){
         return this.amount;
+    }
+
+    @Override
+    public boolean equals(Object o) {
+        if (this == o) return true;
+        if (o == null || getClass() != o.getClass()) return false;
+        Money money = (Money) o;
+        return Objects.equals(amount, money.amount);
     }
 }

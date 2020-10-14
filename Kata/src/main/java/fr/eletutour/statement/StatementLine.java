@@ -3,6 +3,8 @@ package fr.eletutour.statement;
 import fr.eletutour.Money;
 import fr.eletutour.operation.Operation;
 
+import java.util.Objects;
+
 public class StatementLine {
     private Operation operation;
     private Money balance;
@@ -18,5 +20,14 @@ public class StatementLine {
 
     public Money getBalance() {
         return balance;
+    }
+
+    @Override
+    public boolean equals(Object o) {
+        if (this == o) return true;
+        if (o == null || getClass() != o.getClass()) return false;
+        StatementLine that = (StatementLine) o;
+        return Objects.equals(operation, that.operation) &&
+                Objects.equals(balance, that.balance);
     }
 }

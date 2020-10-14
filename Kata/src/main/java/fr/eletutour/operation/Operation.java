@@ -14,7 +14,11 @@ public class Operation {
     public Operation(Date date, TypeOperation typeOperation, Money amount) {
         this.createdOn = date;
         this.typeOperation = typeOperation;
-        this.amount = amount;
+        if (typeOperation == TypeOperation.WITHDRAWAL) {
+            this.amount = amount.negate();
+        } else {
+            this.amount = amount;
+        }
     }
 
     public Date getCreatedOn() {

@@ -1,4 +1,4 @@
-Feature: testing the print statement use case
+Feature: print statement use case
   Scenario: Multiple Deposit / Withdraw and ask the statement balance
     Given I deposit 100 euros
     And I withdraw 80 euros

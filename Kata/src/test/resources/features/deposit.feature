@@ -1,4 +1,4 @@
-Feature: Testing the kata deposit use case
+Feature: deposit use case
   Scenario: Making a deposit and ask the statement
     Given I deposit 100 euros
     When I ask for the statement

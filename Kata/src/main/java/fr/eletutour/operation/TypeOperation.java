@@ -1,7 +1,7 @@
 package fr.eletutour.operation;
 
 public enum TypeOperation {
-    DEPOSIT("deposit");
+    DEPOSIT("deposit"), WITHDRAWAL("withdrawal");
 
     private String name;
 

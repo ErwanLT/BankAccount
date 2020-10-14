@@ -16,6 +16,10 @@ public class BankAccount {
         this.accountOperations.addOperation(TypeOperation.DEPOSIT, money);
     }
 
+    public void makeWithdrawal(Money money){
+        this.accountOperations.addOperation(TypeOperation.WITHDRAWAL, money);
+    }
+
     public AccountOperations getAccountOperations(){
         return this.accountOperations;
     }
